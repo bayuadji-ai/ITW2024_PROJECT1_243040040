@@ -230,8 +230,8 @@ span {
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
   gap: 2.5rem;
+  align-items: center;
 }
 
 .skills-container .skills-box {
