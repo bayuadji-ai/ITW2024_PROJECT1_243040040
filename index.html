@@ -180,23 +180,18 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form name="contact-form-portofolio">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Addres" />
+          <input type="text" placeholder="Full Name" name="full name"/>
+          <input type="email" placeholder="Email Addres" name="email addres"/>
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Name Subject" />
+          <input type="number" placeholder="Mobile Number" name="mobile number"/>
+          <input type="text" placeholder="Name Subject" name="name subject"/>
         </div>
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-        ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+        <textarea cols="30" rows="10" placeholder="Your Message" name="your message"></textarea>
+        <button type="submit" class="btn">Submit</button> 
+        
       </form>
     </section>
 
@@ -219,5 +214,21 @@
 
     <!--custom js-->
     <script src="js/script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw9UCqlIYiXydvx61qy-T2Kr8yGza3b1O0lXMY-VGPFNuy9tLsoLfnZmGyOSH91muo9/exec'
+      const form = document.forms['contact-form-portofolio']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            form.reset();
+            console.log('Success!', response)
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
