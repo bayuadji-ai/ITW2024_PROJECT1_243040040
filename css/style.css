@@ -12,10 +12,10 @@
 }
 
 :root {
-  --bg-color: #1f242d;
-  --second-bg-color: #323946;
+  --bg-color: #1a1616;
+  --second-bg-color: #331717;
   --text-color: #fff;
-  --main-color: #0ef;
+  --main-color: rgb(255, 0, 0);
 }
 
 html {
@@ -44,7 +44,7 @@ section {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  background: darkslategray;
+  background: rgb(33, 36, 36);
 }
 
 .logo {
@@ -81,7 +81,7 @@ section {
 .home-img img {
   width: 30vw;
   border-radius: 100%;
-  box-shadow: 5px 5px 5px 5px #0ef;
+  box-shadow: 5px 5px 5px 5px rgb(255, 0, 0);
 }
 
 .home-content h3 {
@@ -156,7 +156,7 @@ span {
 .about-img img {
   width: 30vw;
   border-radius: 100%;
-  box-shadow: 5px 5px 5px 5px #0ef;
+  box-shadow: 5px 5px 5px 5px rgb(255, 0, 0);
 }
 
 .heading {
@@ -335,12 +335,6 @@ span {
 .contact form .btn {
   margin-top: 2rem;
   cursor: pointer;
-}
-
-@keyframes l2 {
-  to {
-    transform: rotate(1turn);
-  }
 }
 
 .footer {
